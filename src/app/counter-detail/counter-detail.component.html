@@ -1,0 +1,37 @@
+<div class="counter-detail-wrapper">
+    <mat-card class="counter-detail-card" *ngIf="counter">
+        <mat-card-title class="counter-detail-title">
+            <h3>Counter #{{ counter.id }} informations</h3>
+        </mat-card-title>
+        <mat-card-content class="counter-detail-content">
+                <div class="counter-detail-content-element">
+                    <p class="element-title element-title-id">Id</p>
+                    <p class="element-content element-content-id">{{ counter.id }}</p>
+                </div>
+                <div class="counter-detail-content-element">
+                    <p class="element-title element-title-name">Name</p>
+                    <p class="element-content element-content-name">{{ counter.name }}</p>
+                </div>
+                <div class="counter-detail-content-element">
+                    <p class="element-title element-title-value">Value</p>
+                    <p class="element-content element-content-value">{{ counter.value }}</p>
+                    <mat-card-actions class="counter-detail-actions">
+                            <button (click)="increment()" class ="button-transparent"><mat-icon>add_circle</mat-icon></button>
+                    </mat-card-actions>
+                </div>
+                <div class="counter-detail-content-element">
+                    <p class="element-title element-title-created_at">Created on</p>
+                    <p class="element-content element-content-created_at">{{ counter.created_at | date: 'dd/MM/yyyy' }}</p>
+                </div>
+                <div class="counter-detail-content-element">
+                    <p class="element-title element-title-updated_at">Updated on</p>
+                    <p class="element-content element-content-updated_at">{{ counter.updated_at | date: 'dd/MM/yyyy' }}</p>
+                </div>
+                <div class="counter-detail-content-element">
+                    <p class="element-title element-title-url">Url</p>
+                    <a mat-raised-button href="{{ counter.url }}" color="primary" class="element-content element-content-url" target="_blank" rel="noopener noreferrer">Access <mat-icon>open_in_new</mat-icon></a>
+                </div>
+        </mat-card-content>
+        
+    </mat-card>
+</div>

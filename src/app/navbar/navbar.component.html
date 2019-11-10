@@ -5,9 +5,14 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item routerLink="/">Home</a>
+      <a mat-list-item routerLink="profile" *ngIf="auth.loggedIn">Profile</a>
+      <button mat-button (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
+      <button mat-button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
+      <a mat-list-item [matMenuTriggerFor]="countersMenu">Counters List<mat-icon>arrow_drop_down</mat-icon></a>
+      <mat-menu #countersMenu="matMenu">
+          <a mat-menu-item *ngFor="let counter of counters" routerLink="/counter/{{ counter.id }}">#{{ counter.id }} - {{ counter.name | titlecase }}</a>
+      </mat-menu>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,10 +27,9 @@
       </button>
       <span>counters</span>
     </mat-toolbar>
+    <!-- Add Content Here -->
     <div class="content">
-      <app-home></app-home>
+        <router-outlet></router-outlet>
     </div>
-
-    
   </mat-sidenav-content>
 </mat-sidenav-container>

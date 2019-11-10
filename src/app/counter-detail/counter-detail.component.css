@@ -1,30 +1,9 @@
-.counter-detail-wrapper {
-    display: flex;
-    justify-content: center;
-}
 
-.counter-detail-card {
-    max-width: 600px;
-    text-align: left;
-    margin: 5px;
-    display: inline-block;
-}
 
-.counter-detail-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    text-align: center;
-}
+
 
 .counter-detail-title h3 {
     margin: 0px;
-}
-
-.counter-detail-content-element {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .counter-detail-actions {

@@ -1,7 +1,5 @@
 <h1>Mes compteurs</h1>
-<div class="actionbar">
-    <button (click)="reset()" class="button button-reset">Reset</button>
-</div>
-<div class="counters-wrapper">
-    <app-counter *ngFor="let counter of counters" [id]="counter.id"></app-counter>
+<button (click)="reset()">reset all counters</button>
+<div class="spaced">
+  <app-counter *ngFor="let counter of counters" [id]="counter.id"></app-counter>
 </div>

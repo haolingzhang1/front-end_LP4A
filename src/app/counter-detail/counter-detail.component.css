@@ -1,31 +1,11 @@
-
-
-
-
-.counter-detail-title h3 {
-    margin: 0px;
+h1{
+  color:blue;
 }
-
-.counter-detail-actions {
-    display: inline;
-    margin-left: 5px;
-    position:relative;
-}
-
-.element-title {
-    display:inline-block;
-    width: 25%;
-    margin: 0px;
-    padding: 1em;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.element-content {
-    display:inline-block;
-    font-weight: bold;
-    margin-left: 10px;
-}
-
-.element-title {
-    text-transform: uppercase;
+p {
+  font-size: 20px;
+  color: darkgreen;
+  text-align: center;
+  outline-style: dashed;
+  outline-color: seagreen;
+  outline-width: 0.4mm;
 }

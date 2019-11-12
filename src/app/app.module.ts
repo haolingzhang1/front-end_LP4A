@@ -2,7 +2,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,12 +15,10 @@ import { MatListModule } from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
 import { HomeComponent } from './home/home.component';
-
 import { HttpClientModule }    from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
 import { CounterDetailComponent } from './counter-detail/counter-detail.component';
-
-
 
 @NgModule({
   declarations: [
@@ -30,10 +27,9 @@ import { CounterDetailComponent } from './counter-detail/counter-detail.componen
     NavbarComponent,
     HomeComponent,
     ProfileComponent,
-    CounterDetailComponent,
+    CounterDetailComponent
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
@@ -45,6 +41,7 @@ import { CounterDetailComponent } from './counter-detail/counter-detail.componen
     MatCardModule,
     MatMenuModule,
     HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

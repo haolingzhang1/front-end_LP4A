@@ -25,12 +25,12 @@ export class CounterService {
   }
 
   getCounter(id: number) : Observable<Counter> {
-    var url = 'https://lp4a-backend-a2019.herokuapp.com/counters/' + id + '.json';
+    var url = 'https://lp4asgadot.herokuapp.com/counters/' + id + '.json';
     return this.http.get<Counter>(url);
   }
 
   getCounters() : Observable<Counter[]> {
-    var url = 'https://lp4a-backend-a2019.herokuapp.com/counters.json';
+    var url = 'https://lp4asgadot.herokuapp.com/counters/.json';
     return this.http.get<Counter[]>(url);
   }
 

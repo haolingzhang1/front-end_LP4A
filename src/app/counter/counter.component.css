@@ -1,7 +1,18 @@
-h1 {
-  color: blue;
+h1{
+  color:blue;
+
+}
+p {
+  font-size: 20px;
+  color: black;
+  outline-style: dashed;
+  outline-color: seagreen;
+  outline-width: 0.4mm;
 }
 
-p {
-  font-size: 200%;
+.counter-card {
+
+  text-align: center;
+  margin: 20px;
+
 }
